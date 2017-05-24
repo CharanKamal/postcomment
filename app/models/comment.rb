@@ -1,0 +1,6 @@
+class Comment < ApplicationRecord
+  belongs_to :post
+  has_many :replies, dependent: :destroy
+  has_many :likes, as: :likeable , dependent: :destroy
+  validates :comment, presence: true
+end
