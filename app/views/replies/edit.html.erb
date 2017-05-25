@@ -1,2 +1,12 @@
-<h1>Replies#edit</h1>
-<p>Find me in app/views/replies/edit.html.erb</p>
+<h4>Edit</h4>
+
+<%= form_for([@post, @comment, @reply]) do |f| %>
+  
+    <%= f.label :reply %><br />
+    <%= f.text_area :reply %>
+ 
+  
+    <%= f.submit %>
+  
+<% end %>
+

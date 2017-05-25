@@ -1,4 +1,5 @@
-<p>
+ <h1>Total Comments: <%=@post.comments.count %></h1>
+ <p>
   <strong>Post:</strong>
   <%= @post.post %>
 </p>
@@ -7,9 +8,18 @@
  
 <h2>Comments</h2>
 <%= render @post.comments %>
+
+
+
  
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
+
+
+
+
+
+
  
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Home', posts_path %>

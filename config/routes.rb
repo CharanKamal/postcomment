@@ -2,10 +2,14 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :posts do
-  	resources :comments do
-  		resources :replies
+  	resources :likes
+  	 resources :comments do
+  	  resources :likes
+  	    resources :replies do
+  		 resources :likes
   	end
   end
+end
 
   get 'posts/index'
 

@@ -1,20 +1,8 @@
-<%= form_for @reply,url: post_comment_replies_path do |f| %>
- 
-  <% if @reply.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@reply.errors.count, "error") %> prohibited
-        this reply from being saved:
-      </h2>
-      <ul>
-        <% @reply.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <p>
+<h1>New Reply</h1>
+
+<%= form_for @reply, url: post_comment_replies_path do |f| %>
+
+<p>
     <%= f.label :reply %><br>
     <%= f.text_field :reply %>
   </p>
